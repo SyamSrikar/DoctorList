@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .main_wrapper {
+    background-color: #E8E8E8;
+    height: 41.5em;
+    width: auto;
+} */
+
+nav{
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 100;
+}
+    
+.nav_image{
+    width: 80px;
+    height: 60px;
+    margin-left: 1em;
+}
+.nav_image img{
+    height: 58px;
+    width: 60px;
+}
+nav .menu-btn i{
+    cursor: pointer;
+    display: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+nav li{
+    margin: 0 1em;
+    font-size: 1.2em;
+    
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: .4em 1em;
+}
+a:focus,a:active{
+    border: 1px;
+    border-radius: 15px;
+    background-color: #33ff33;
+    
+}
+#click{
+    display: none;
+}
+
+.search_box{
+    margin: 100px auto 50px auto;
+}
+.search{
+    width: 450px;
+    border: 3px solid green;
+    padding: 10px;
+    border-radius: 30px;
+}
+input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    width: 93%;
+    font-size: 20px;
+}
+ .search i{
+    color: green;
+    font-size: 20px;
+ }
+
+ .container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+ }
+ .doctors{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 450px;
+    width: 50%;
+    margin: 15px auto;
+}   
+.doctor{
+    position: relative;
+    top: 15px;
+    height: 10%;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+}
+.boxes{
+    /* display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    height: 85%;
+    align-items: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+}
+.box{
+    width: 120px;
+    height: 110px;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 5px;
+    padding: 2px;
+}
+.items{
+    text-align: center;
+}
+.button{
+    border: 1px solid black;
+    border-radius: 7px;
+    /* margin-left: 55px; */
+    margin: 30px 40px;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+}
+.button img{
+    border-radius: 5px;
+    height: 100px;
+    width: 125px;
+}
+
+#doctor{
+    background-color: #33ff33;
+
+}
+#online{
+    background-color: #00e6e6;
+}
+#specialist{
+    background-color: #4da6ff;
+}
+#ayurveda{
+    background-color: #e699ff;
+}
+#homeo{
+    background-color: #9494b8;
+}
+#dietitian{
+    background-color:  #ffff33;
+}
+.button div{
+    position: relative;
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+}
+@media (max-width:900px){
+    nav{
+        border-radius: 0;
+        justify-content: space-between;
+    }
+    nav img{
+        margin-left:2em
+    }
+    nav .menu-btn i{
+        display: block;
+        float: right;
+        font-size: 30px;
+        padding-right: 30px;
+    }
+    nav ul{
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #E7E9DE;
+        
+    }
+    nav li{
+        margin: 30px 0px;
+        border-bottom: 1px solid grey;
+        padding:5px;
+    }
+    nav a{
+        margin-bottom: 10px;
+        
+    }
+    a:focus,a:active{
+        background-color: #A7BA44;
+    }
+    #click:checked ~ ul{
+        left: 0%;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+        border-bottom: 2px solid black;
+        z-index: 100;
+        width: 100vw;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    #check:checked ~ .search{
+        width: 90wh;
+        align-items: center;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+
+    }
+    #click:checked ~ .container{
+        top: 200px;
+    }
+}
+@media (max-width:480px){
+    nav img{
+        margin-left: 1em;
+    }
+    .search{
+        width: 345px;
+    }
+    .doctors{
+        width: 75%;
+    }
+    .search input{
+        width: 90%;
+    }
+}
+@media (max-width:380px){
+    .search{
+        width: 275px;
+    }
+}
+@media (max-width:310px){
+    .search{
+        width: 240px;
+    }
+}
