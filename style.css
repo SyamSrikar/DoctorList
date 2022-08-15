@@ -139,6 +139,8 @@ input{
     width: 140px;
     height: 140px;
     cursor: pointer;
+    box-sizing:border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .button img{
     border-radius: 5px;
